@@ -12,13 +12,13 @@ export default function Home() {
       <section className="relative h-screen w-full overflow-hidden bg-primary">
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full"
-          gradientBackgroundStart="rgb(8, 7, 63)" // Brighter Navy
-          gradientBackgroundEnd="rgb(10, 20, 90)" // Vibrant Deep Blue
+          gradientBackgroundStart="rgb(5, 5, 40)" // Deep Navy
+          gradientBackgroundEnd="rgb(20, 20, 80)" // Dark Blue-Purple
           firstColor="37, 99, 235" // Royal Blue
           secondColor="139, 92, 246" // Vibrant Purple
-          thirdColor="14, 165, 233" // Sky Blue
+          thirdColor="59, 130, 246" // Pure Blue (removed Cyan to avoid green tint)
           fourthColor="192, 38, 211" // Fuchsia
-          fifthColor="34, 197, 94" // Brighter Green
+          fifthColor="79, 70, 229" // Indigo (replaced Green)
           blendingValue="hard-light"
         >
           {/* Subtle Grid Overlay */}
