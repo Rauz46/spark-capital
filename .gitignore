@@ -1,0 +1,31 @@
+# Dependencies and build files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Downloaded scripts (keep only the main one)
+download_images (1).ps1
+download_images (2).sh
+image_urls (1).txt
+antigravity_prompt (1).md
+IMAGE_DOWNLOAD_GUIDE (1).md
+
+# Logs
+*.log

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Spark Capital - Get in touch with our team across the US, UK, and India">
+    <title>Contact - Spark Capital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-text-primary);
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            font-family: var(--font-body);
+            font-size: var(--font-size-base);
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-base);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .office-card {
+            background-color: var(--color-bg-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .office-card h4 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .office-card p {
+            margin: 0;
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Spark Capital Logo" class="logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="investors.html" class="nav-link">Investors</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">Get In Touch</h1>
+            <p class="hero-description fade-in">Let's Connect, Meet, Talk</p>
+            <p class="hero-subtext fade-in">
+                We have offices and teams across the US, UK and India for a coffee catchup
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: var(--spacing-3xl);">
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <div class="card">
+                        <h2 style="margin-bottom: var(--spacing-lg);">Send us a message</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="requirement" class="form-label">Requirement *</label>
+                                <textarea id="requirement" name="requirement" class="form-textarea"
+                                    placeholder="Tell us about your requirements..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your full name"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company *</label>
+                                <input type="text" id="company" name="company" class="form-input"
+                                    placeholder="Your company name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="your.email@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="source" class="form-label">How did you hear about us? *</label>
+                                <select id="source" name="source" class="form-select" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Internet Search">Internet Search</option>
+                                    <option value="Email">Email</option>
+                                    <option value="Referral">Referral</option>
+                                    <option value="Advertisement">Advertisement</option>
+                                    <option value="Press Release">Press Release</option>
+                                    <option value="Social Media">Social Media</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Side Image -->
+                <div class="fade-in">
+                    <img src="images/business-meeting-contact.webp" alt="Business Meeting"
+                        style="border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-xl fade-in">Local Offices</h2>
+
+            <div class="grid grid-3">
+                <!-- United States -->
+                <div class="fade-in">
+                    <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-md);">🇺🇸 United States</h3>
+
+                    <div class="office-card">
+                        <h4>Tampa</h4>
+                        <p>1211 Tech Blvd, #23<br>Tampa, Florida 33619</p>
+                    </div>
+
+                    <div class="office-card">
+                        <h4>New York</h4>
+                        <p>111 Town Square Pl<br>Jersey City, NJ 07310</p>
+                    </div>
+
+                    <div class="office-card">
+                        <h4>Richmond</h4>
+                        <p>2400 Old Brick Road, Suite 302<br>Glen Allen, VA 23060</p>
+                    </div>
+                </div>
+
+                <!-- United Kingdom -->
+                <div class="fade-in">
+                    <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-md);">🇬🇧 United Kingdom
+                    </h3>
+
+                    <div class="office-card">
+                        <h4>London</h4>
+                        <p>SINC, 12-16 Addiscombe Road<br>Croydon, London CR0 0XT</p>
+                    </div>
+
+                    <div class="office-card">
+                        <h4>Brighton</h4>
+                        <p>Sussex Innovation Centre<br>Science Park Square<br>Brighton BN1 9SB</p>
+                    </div>
+                </div>
+
+                <!-- India -->
+                <div class="fade-in">
+                    <h3 style="color: var(--color-secondary); margin-bottom: var(--spacing-md);">🇮🇳 India</h3>
+
+                    <div class="office-card">
+                        <h4>Bengaluru</h4>
+                        <p>476/A, 14th B Cross Road<br>OBEYA Verve, HSR Layout<br>Karnataka – 560102</p>
+                    </div>
+
+                    <div class="office-card">
+                        <h4>Chennai</h4>
+                        <p>6th Floor, Phase II<br>Arihant Technopolis<br>4/293, Rajiv Gandhi Salai<br>Perungudi,
+                            Chennai<br>Tamil Nadu 600096</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <img src="images/logo.png" alt="Spark Capital" class="footer-logo">
+                    <p class="footer-disclosure">
+                        <strong>DISCLOSURE:</strong> Spark Capital is not a registered broker-dealer, investment
+                        adviser, investment manager, or registered funding portal. Neither the Securities and Exchange
+                        Commission nor any state securities regulator has approved or disapproved the securities, the
+                        terms of any offerings, or the accuracy or completeness of any materials presented on this
+                        website.
+                        <br><br>
+                        Spark Capital does not make investment recommendations to you or provide any analysis, advice,
+                        or opinions regarding any investment. Spark Capital does not solicit, recommend, or endorse any
+                        particular security or offering. Spark Capital does not verify information provided by companies
+                        or issuers and makes no representations or warranties as to the accuracy or completeness of any
+                        such information.
+                        <br><br>
+                        The information contained on this website is provided by Spark Capital and/or third parties.
+                        Spark Capital and its affiliates, directors, officers, employees, agents, or representatives
+                        shall not be liable for any errors or omissions in the content of this website or for any
+                        actions taken in reliance thereon.
+                        <br><br>
+                        This website does not constitute an offer to sell or a solicitation of an offer to buy any
+                        securities. Any offering of securities will be made only through definitive offering documents
+                        and only to qualified or accredited investors pursuant to applicable securities laws.
+                        <br><br>
+                        Investments in private companies and venture-backed businesses are speculative, involve a high
+                        degree of risk, and may result in the loss of the entire investment. Past performance is not
+                        indicative of future results.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-nav-title">Quick Links</h3>
+                    <nav class="footer-nav">
+                        <a href="investors.html" class="footer-link">Investors</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </nav>
+
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Spark Capital. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-top"
+        style="position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; border-radius: 50%; background-color: var(--color-secondary); color: white; border: none; cursor: pointer; display: none; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: var(--shadow-lg); transition: all var(--transition-base); z-index: 999;"
+        aria-label="Scroll to top">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
