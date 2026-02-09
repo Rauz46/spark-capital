@@ -9,48 +9,47 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-24 pb-16">
       {/* Hero Section - Redesigned */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-screen w-full overflow-hidden bg-primary">
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full"
-          gradientBackgroundStart="rgb(0, 17, 82)" // Deep Blue
-          gradientBackgroundEnd="rgb(0, 17, 82)"
+          gradientBackgroundStart="rgb(3, 0, 50)" // Verry Deep Blue
+          gradientBackgroundEnd="rgb(0, 5, 30)"
           firstColor="18, 113, 255" // Bright Blue
-          secondColor="221, 74, 255" // Purple
-          thirdColor="100, 220, 255" // Cyan/Greenish
-          fourthColor="200, 50, 50" // Redish accent
-          fifthColor="180, 255, 100" // Green highlight
+          secondColor="147, 51, 234" // Purple
+          thirdColor="34, 211, 238" // Cyan/Greenish
+          fourthColor="76, 29, 149" // Dark Purple
+          fifthColor="16, 185, 129" // Emerald Green
+          blendingValue="soft-light"
         >
+          {/* Subtle Grid Overlay */}
+          <div className="absolute inset-0 z-[5] opacity-20 pointer-events-none"
+            style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`, backgroundSize: '40px 40px' }}>
+          </div>
+
           <div className="absolute z-50 inset-0 flex items-center justify-center p-4 md:p-12 text-white pointer-events-none">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
 
               {/* Left Content */}
               <div className="space-y-8 text-left pointer-events-auto z-10">
                 <div className="relative">
-                  <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight drop-shadow-lg">
+                  <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight drop-shadow-2xl">
                     Venture Studio led <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 animate-gradient-x">
                       Startup Investing
                     </span>
                   </h1>
-                  {/* Scribble Annotation */}
-                  <div className="absolute -top-12 -left-8 md:-left-12 rotate-[-15deg] hidden md:block opacity-80">
-                    <span className="font-handwriting text-2xl text-yellow-300">New Way!</span>
-                    <svg width="60" height="40" viewBox="0 0 100 50" className="stroke-yellow-300 fill-none stroke-[3px]">
-                      <path d="M10,10 Q50,40 90,10" />
-                    </svg>
-                  </div>
                 </div>
 
-                <p className="font-sans text-lg md:text-xl text-white/80 max-w-xl leading-relaxed">
+                <p className="font-sans text-lg md:text-xl text-white/90 max-w-xl leading-relaxed">
                   Join us in building the next generation of enterprise AI companies.
                   From idea to exit, we are with you every step of the way.
                 </p>
 
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 h-14 rounded-full shadow-xl shadow-blue-900/20">
+                  <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 h-14 rounded-full shadow-2xl shadow-blue-900/30 transition-all hover:scale-105">
                     <Link href="/contact">Start Investing</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="bg-transparent border-white/30 text-white hover:bg-white/10 font-medium text-lg px-8 h-14 rounded-full backdrop-blur-sm">
+                  <Button asChild variant="outline" size="lg" className="bg-transparent border-white/40 text-white hover:bg-white/10 font-medium text-lg px-8 h-14 rounded-full backdrop-blur-md transition-all hover:border-white/60">
                     <Link href="/portfolio">View Portfolio</Link>
                   </Button>
                 </div>
@@ -60,7 +59,7 @@ export default function Home() {
               <div className="relative w-full h-full min-h-[500px] flex items-center justify-center pointer-events-auto">
 
                 {/* Orbiting Circles Background */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-40 scale-75 md:scale-100">
+                <div className="absolute inset-0 flex items-center justify-center opacity-30 scale-75 md:scale-100">
                   <OrbitingCircles radius={150} duration={30} delay={0} className="border-none bg-transparent">
                     <div className="h-4 w-4 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.8)]"></div>
                   </OrbitingCircles>
@@ -68,46 +67,46 @@ export default function Home() {
                     <div className="h-6 w-6 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.8)]"></div>
                   </OrbitingCircles>
                   <OrbitingCircles radius={350} duration={50} delay={20} className="border-none bg-transparent">
-                    <div className="h-3 w-3 rounded-full bg-yellow-300 shadow-[0_0_10px_rgba(253,224,71,0.8)]"></div>
+                    <div className="h-3 w-3 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.8)]"></div>
                   </OrbitingCircles>
                 </div>
 
-                {/* Bento Grid Layout */}
+                {/* Bento Grid Layout - Cleaned up */}
                 <div className="relative z-10 grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-lg aspect-square p-4">
 
                   {/* Fund 1 Card */}
-                  <div className="bento-card col-span-1 row-span-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300 group">
-                    <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4 shadow-lg group-hover:shadow-blue-500/40 transition-shadow">
-                      <Rocket className="text-white" size={24} />
+                  <div className="bento-card col-span-1 row-span-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 group shadow-2xl">
+                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-4 shadow-lg group-hover:shadow-blue-500/50 transition-all group-hover:-translate-y-1">
+                      <Rocket className="text-white" size={28} />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-xl text-white mb-1">Fund 1</h3>
-                      <p className="text-xs text-white/70">Pre-seed Incubation</p>
+                      <h3 className="font-heading font-bold text-2xl text-white mb-1">Fund 1</h3>
+                      <p className="text-sm text-white/60">Pre-seed Incubation</p>
                     </div>
                   </div>
 
                   {/* Fund 2 Card */}
-                  <div className="bento-card col-span-1 row-span-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 flex flex-col justify-between hover:scale-105 transition-transform duration-300 group delay-75">
-                    <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mb-4 shadow-lg group-hover:shadow-purple-500/40 transition-shadow">
-                      <TrendingUp className="text-white" size={24} />
+                  <div className="bento-card col-span-1 row-span-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 group delay-75 shadow-2xl">
+                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-4 shadow-lg group-hover:shadow-purple-500/50 transition-all group-hover:-translate-y-1">
+                      <TrendingUp className="text-white" size={28} />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-xl text-white mb-1">Fund 2</h3>
-                      <p className="text-xs text-white/70">Growth Capital</p>
+                      <h3 className="font-heading font-bold text-2xl text-white mb-1">Fund 2</h3>
+                      <p className="text-sm text-white/60">Growth Capital</p>
                     </div>
                   </div>
 
                   {/* External Investors Card (Wide) */}
-                  <div className="bento-card col-span-2 row-span-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 flex items-center justify-between hover:scale-105 transition-transform duration-300 group delay-150 relative overflow-hidden">
+                  <div className="bento-card col-span-2 row-span-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 md:p-10 flex items-center justify-between hover:bg-white/10 transition-all duration-500 group delay-150 relative overflow-hidden shadow-2xl">
                     <div className="relative z-10">
-                      <h3 className="font-heading font-bold text-2xl text-white mb-2">External Investors</h3>
-                      <p className="text-sm text-white/70 max-w-[200px]">Series A+ funding from top-tier VCs</p>
+                      <h3 className="font-heading font-bold text-3xl text-white mb-2">External Investors</h3>
+                      <p className="text-base text-white/60 max-w-[280px]">Series A+ funding from top-tier VCs worldwide</p>
                     </div>
-                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/40 transition-shadow relative z-10">
-                      <Users className="text-white" size={32} />
+                    <div className="h-20 w-20 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/50 transition-all group-hover:scale-110 relative z-10">
+                      <Users className="text-white" size={40} />
                     </div>
                     {/* Decorative glow */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-green-500/20 blur-3xl rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-emerald-500/10 blur-[80px] rounded-full"></div>
                   </div>
 
                 </div>
