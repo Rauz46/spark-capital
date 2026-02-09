@@ -1,130 +1,36 @@
-# Spark Capital Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A professional 5-page website for Spark Capital venture capital firm, showcasing their unique two-fund investment model and venture studio approach.
+## Getting Started
 
-## 🌐 Live Demo
-[View Live Site](#) *(Add your GitHub Pages URL here after deployment)*
+First, run the development server:
 
-## 📋 About
-
-Spark Capital is a Venture Capital firm that invests in Enterprise AI Startups via their Venture Studio. This website features:
-
-- **5 Pages**: Home, Investors, Portfolio, About, Contact
-- **Responsive Design**: Mobile-first approach, works on all devices
-- **Modern UI**: Professional design with smooth animations
-- **Complete Functionality**: Working contact form, navigation, all features
-
-## 🚀 Features
-
-- ✅ Fully responsive design
-- ✅ Sticky navigation with mobile menu
-- ✅ Smooth scroll animations
-- ✅ Contact form with validation
-- ✅ SEO optimized
-- ✅ Fast loading times
-- ✅ Cross-browser compatible
-
-## 🛠️ Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Custom properties, Grid, Flexbox
-- **JavaScript (ES6)** - Vanilla JS, no frameworks
-- **Google Fonts** - Poppins & Inter
-
-## 📁 Project Structure
-
-```
-spark-capital/
-├── index.html              # Home page
-├── investors.html          # Investors information
-├── portfolio.html          # Portfolio companies
-├── about.html              # About Spark Capital
-├── contact.html            # Contact form & offices
-├── css/
-│   └── styles.css          # Global stylesheet
-├── js/
-│   └── main.js             # JavaScript functionality
-└── images/                 # Image assets (17 files)
-```
-
-## 🎨 Design Highlights
-
-- **Color Palette**: Deep blue primary, teal secondary, orange accents
-- **Typography**: Poppins for headings, Inter for body text
-- **Components**: Cards, gradients, animations, responsive grids
-
-## 📱 Pages Overview
-
-### Home
-- Hero section with company overview
-- Fund flow diagram
-- Three-phase investment model
-- Our Story & Rocket Venture Studio
-- Fund comparison (Fund 1 & Fund 2)
-
-### Investors
-- Fund 2 details (Open to LPs)
-- Fund 1 details (Fully Subscribed)
-- Investment phases overview
-
-### Portfolio
-- 5 portfolio companies (Ignitho, Piqual, Talentou, Prodeia, Caimue)
-- Rocket Venture Studio section
-- Launch-Scale-Exit-Repeat model
-
-### About
-- Company story
-- Team members (8 people)
-- Investment model details
-
-### Contact
-- Contact form with validation
-- Office locations (US, UK, India)
-- 7 global offices
-
-## 🚀 Local Development
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/spark-capital.git
-cd spark-capital
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-2. Open in browser:
-```bash
-# Simply open index.html in your browser
-# Or use a local server:
-python -m http.server 8000
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-3. Visit `http://localhost:8000` (if using server)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📦 Deployment
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### GitHub Pages
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select main branch
-4. Save and wait for deployment
+## Learn More
 
-### Netlify/Vercel
-1. Drag and drop the folder
-2. Automatic deployment
+To learn more about Next.js, take a look at the following resources:
 
-## 📄 License
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-© Spark Capital. All rights reserved.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 🤝 Contributing
+## Deploy on Vercel
 
-This is a production website for Spark Capital. For inquiries, please contact through the website.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 📞 Contact
-
-- **Website**: [Spark Capital](https://sc.nuivio.com)
-- **Headquarters**: Tampa, Florida
-- **Global Offices**: US, UK, India
-
----
-
-Built with ❤️ for Spark Capital
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

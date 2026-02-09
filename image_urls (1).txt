@@ -1,0 +1,53 @@
+# Spark Capital Website - All Image URLs
+# Simple list for easy copying
+
+# 1. Logo
+https://sc.nuivio.com/wp-content/uploads/2025/12/freepik__please-remove-the-bg-forimg1__27360_1-removebg-preview-e1767094783206.png
+
+# 2. Fund 1 Icon
+https://sc.nuivio.com/wp-content/uploads/2026/01/fund-1.png
+
+# 3. Arrow Connector
+https://sc.nuivio.com/wp-content/uploads/2026/01/svgviewer-png-output-58-e1767943520973.png
+
+# 4. Fund 2 Icon
+https://sc.nuivio.com/wp-content/uploads/2026/01/fund-2-1.png
+
+# 5. External Investors Icon
+https://sc.nuivio.com/wp-content/uploads/2026/01/External.png
+
+# 6. Phase 1 Pre-seed Illustration
+https://sc.nuivio.com/wp-content/uploads/2026/01/Recruitment-Manager-8-scaled.webp
+
+# 7. Phase 2 Seed Illustration
+https://sc.nuivio.com/wp-content/uploads/2026/01/Recruitment-Manager-7-scaled.png
+
+# 8. Phase 3 Series A Illustration
+https://sc.nuivio.com/wp-content/uploads/2026/01/Recruitment-Manager-6-scaled.png
+
+# 9. Rocket Main Visual
+https://sc.nuivio.com/wp-content/uploads/2026/01/12-scaled-e1769608630171.png
+
+# 10. Rocket Cycle GIF (Launch-Scale-Exit-Repeat)
+https://sc.nuivio.com/wp-content/uploads/2026/01/rocket.gif
+
+# 11. Rocket Icon
+https://sc.nuivio.com/wp-content/uploads/2026/01/svgviewer-png-output-60.png
+
+# 12. CTA Background - Chat Section
+https://sc.nuivio.com/wp-content/uploads/2026/01/Untitled-design-10-2-scaled.png
+
+# 13. CTA Background - Portfolio/Contact
+https://sc.nuivio.com/wp-content/uploads/2026/01/freepik__background__59570-scaled-e1768826910631.png
+
+# 14. Business Strategy Illustration (About Page)
+https://sc.nuivio.com/wp-content/uploads/2026/01/business-enterprise-strategy-market-analysis-niche-selection-conquering-marketplace-studying-market-segmentation-planning-company-development.webp
+
+# 15. Business Meeting Image (Contact Page)
+https://sc.nuivio.com/wp-content/uploads/2026/01/business-woman-attending-online-business-meeting-e1768826059676.webp
+
+# 16. Fund 2 Investors Main Image
+https://sc.nuivio.com/wp-content/uploads/2026/01/11-scaled-e1769607460990.png
+
+# 17. Fund 2 Diagram
+https://sc.nuivio.com/wp-content/uploads/2026/01/fund-2.png
