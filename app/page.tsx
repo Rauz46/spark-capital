@@ -12,14 +12,14 @@ export default function Home() {
       <section className="relative h-screen w-full overflow-hidden bg-primary">
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full"
-          gradientBackgroundStart="rgb(3, 0, 50)" // Verry Deep Blue
-          gradientBackgroundEnd="rgb(0, 5, 30)"
-          firstColor="18, 113, 255" // Bright Blue
-          secondColor="147, 51, 234" // Purple
-          thirdColor="34, 211, 238" // Cyan/Greenish
-          fourthColor="76, 29, 149" // Dark Purple
-          fifthColor="16, 185, 129" // Emerald Green
-          blendingValue="soft-light"
+          gradientBackgroundStart="rgb(8, 7, 63)" // Brighter Navy
+          gradientBackgroundEnd="rgb(10, 20, 90)" // Vibrant Deep Blue
+          firstColor="37, 99, 235" // Royal Blue
+          secondColor="139, 92, 246" // Vibrant Purple
+          thirdColor="14, 165, 233" // Sky Blue
+          fourthColor="192, 38, 211" // Fuchsia
+          fifthColor="34, 197, 94" // Brighter Green
+          blendingValue="hard-light"
         >
           {/* Subtle Grid Overlay */}
           <div className="absolute inset-0 z-[5] opacity-20 pointer-events-none"
