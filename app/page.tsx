@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { HeroScribbles } from "@/components/ui/hero-scribbles";
-import { HeroImage } from "@/components/ui/hero-image";
+import { HeroOrbitingCircles } from "@/components/ui/hero-orbiting-circles";
 import MouseScroll from "@/components/ui/mouse-scroll";
 
 export default function Home() {
@@ -97,7 +97,7 @@ export default function Home() {
 
             {/* Right Image Composition — Desktop only */}
             <div className="hidden lg:flex items-center justify-center lg:flex-1">
-              <HeroImage />
+              <HeroOrbitingCircles />
             </div>
 
           </div>
