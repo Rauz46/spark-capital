@@ -2,136 +2,136 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { OrbitingCircles } from "@/components/ui/orbiting-circles";
-import { Spotlight } from "@/components/ui/spotlight";
+import { HeroScribbles } from "@/components/ui/hero-scribbles";
+import { HeroImage } from "@/components/ui/hero-image";
 import MouseScroll from "@/components/ui/mouse-scroll";
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Rocket, Lightbulb, Globe } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-24 pb-16">
-      {/* Hero Section - Redesigned to Match Screenshot */}
+      {/* ══════════════ HERO SECTION — Cinematic Redesign ══════════════ */}
       <section className="relative h-screen w-full overflow-hidden bg-primary">
-        {/* Spotlight Effect - Moved outside to ensure visibility */}
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20 z-40"
-          fill="white"
-        />
+
+        {/* Layer 0 — Gradient Animation Background */}
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full"
-          gradientBackgroundStart="rgb(0, 60, 200)" // Bright Royal Blue Base
-          gradientBackgroundEnd="rgb(0, 40, 160)" // Slightly darker for depth
-          firstColor="0, 120, 255" // Vivid Azure
-          secondColor="120, 50, 255" // Vivid Purple
-          thirdColor="0, 180, 255" // Bright Cyan/Blue
-          fourthColor="100, 50, 255" // Deep Purple (Replaced Green)
-          fifthColor="80, 0, 200" // Indigo
-          blendingValue="overlay" // Stronger contrast/pop
-        >
-          {/* Subtle Grid Overlay */}
-          <div className="absolute inset-0 z-[5] opacity-20 pointer-events-none"
-            style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)`, backgroundSize: '40px 40px' }}>
-          </div>
+          gradientBackgroundStart="rgb(0, 60, 200)"
+          gradientBackgroundEnd="rgb(0, 40, 160)"
+          firstColor="0, 120, 255"
+          secondColor="120, 50, 255"
+          thirdColor="0, 180, 255"
+          fourthColor="100, 50, 255"
+          fifthColor="80, 0, 200"
+          blendingValue="overlay"
+        />
 
+        {/* Layer 1 — Cinematic Grid + Vignette */}
+        <div
+          className="absolute inset-0 z-[3] pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            maskImage:
+              "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%)",
+            animation: "gridPulse 4s ease-in-out infinite",
+          }}
+        />
 
+        {/* Layer 1.5 — Scan Line */}
+        <div
+          className="absolute inset-x-0 top-0 z-[4] h-px pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.15) 70%, transparent 100%)",
+            animation: "scanLine 10s linear infinite",
+          }}
+        />
 
-          <div className="absolute z-50 inset-0 flex items-center justify-center p-4 md:p-12 text-white pointer-events-none">
-            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center h-full">
+        {/* Layer 2 — Scribbles */}
+        <HeroScribbles />
 
-              {/* Left Content */}
-              <div className="space-y-6 text-left pointer-events-auto z-10">
-                <div className="relative">
-                  <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight drop-shadow-lg">
-                    A New Way to Invest <br />
-                    in <span className="font-serif italic text-white drop-shadow-md">New Ventures</span>
-                  </h1>
-                </div>
+        {/* Layer 10 — Main Content */}
+        <div className="absolute z-[10] inset-0 flex items-center justify-center px-4 md:px-8 text-white pointer-events-none">
+          <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 h-full">
 
-                <p className="font-sans text-base md:text-lg text-white/90 max-w-xl leading-relaxed text-justify">
-                  We are a Venture Capital firm that invests in Enterprise AI Startups
-                  via our Venture Studio. We do this via a unique two fund model. Fund
-                  1 invests and initially owns 100% of new startups that are incubated
-                  from ideas generated internally via our Venture Studio. While Fund 2
-                  invests only after a startup gets to breakeven and is on track to
-                  $1million in ARR. Fund 2's growth capital accelerates the startups to
-                  multimillion revenue and readies it for external investors.
-                </p>
+            {/* Center Text Column */}
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl pointer-events-auto z-10 lg:flex-1">
 
-                {/* Mouse Scroll Animation - Replaces CTA */}
-                <div className="pt-8 flex justify-start">
-                  <MouseScroll />
-                </div>
+              {/* Badge */}
+              <span
+                className="inline-block mb-6 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-xs md:text-sm font-mono tracking-widest text-white/80 uppercase"
+                style={{
+                  opacity: 0,
+                  animation: "heroFadeUp 0.8s cubic-bezier(0.4,0,0.2,1) 0.3s forwards",
+                }}
+              >
+                AI-First Venture Studio
+              </span>
+
+              {/* Main Heading */}
+              <h1
+                className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[84px] leading-[1.1] tracking-[-0.04em]"
+                style={{
+                  opacity: 0,
+                  animation: "heroFadeUp 1.2s cubic-bezier(0.4,0,0.2,1) 0.5s forwards",
+                  textShadow: "0 4px 20px rgba(0,0,0,0.3), 0 0 40px rgba(255,255,255,0.08)",
+                }}
+              >
+                A New Way to Invest
+                <br />
+                <span className="italic font-serif">in New Ventures.</span>
+              </h1>
+
+              {/* Subheading */}
+              <p
+                className="mt-6 text-lg md:text-xl lg:text-[22px] font-sans font-normal text-white/85 leading-relaxed max-w-[800px]"
+                style={{
+                  opacity: 0,
+                  animation: "heroFadeUp 0.8s cubic-bezier(0.4,0,0.2,1) 1s forwards",
+                }}
+              >
+                We invest in Enterprise AI Startups via our Venture Studio, building companies from idea to scale.
+              </p>
+
+              {/* Description */}
+              <p
+                className="mt-5 text-sm md:text-base lg:text-lg font-sans font-normal text-white/70 leading-[1.7] max-w-[700px]"
+                style={{
+                  opacity: 0,
+                  animation: "heroFadeUp 0.8s cubic-bezier(0.4,0,0.2,1) 1.3s forwards",
+                }}
+              >
+                Spark Capital is a Venture Capital firm that invests in post-revenue enterprise AI startups through a unique two-fund model — from idea incubation to multimillion-dollar growth.
+              </p>
+
+              {/* Mouse Scroll */}
+              <div
+                className="mt-10"
+                style={{
+                  opacity: 0,
+                  animation: "heroFadeUp 0.6s cubic-bezier(0.4,0,0.2,1) 1.6s forwards",
+                }}
+              >
+                <MouseScroll />
               </div>
-
-              {/* Right Content - Fund Cycle Diagram */}
-              <div className="relative w-full h-full min-h-[400px] flex items-center justify-center pointer-events-auto">
-                <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px]">
-
-                  <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent">
-
-                    {/* Central Image */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl z-20 bg-blue-900">
-                      <Image
-                        src="/images/business-meeting-contact.webp"
-                        alt="Startups"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    {/* Fund 1 - Inner Circle */}
-                    <OrbitingCircles
-                      className="size-[50px] border-none bg-transparent"
-                      duration={20}
-                      delay={20}
-                      radius={100}
-                    >
-                      <div className="flex flex-col items-center justify-center">
-                        <div className="p-3 bg-cyan-500 rounded-full shadow-lg">
-                          <Lightbulb className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="text-xs font-bold text-white mt-1 bg-black/50 px-2 rounded">Fund 1</span>
-                      </div>
-                    </OrbitingCircles>
-
-                    {/* Fund 2 - Middle Circle */}
-                    <OrbitingCircles
-                      className="size-[50px] border-none bg-transparent"
-                      duration={20}
-                      delay={10}
-                      radius={160}
-                      reverse
-                    >
-                      <div className="flex flex-col items-center justify-center">
-                        <div className="p-3 bg-purple-500 rounded-full shadow-lg">
-                          <TrendingUp className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="text-xs font-bold text-white mt-1 bg-black/50 px-2 rounded">Fund 2</span>
-                      </div>
-                    </OrbitingCircles>
-
-                    {/* External - Outer Circle */}
-                    <OrbitingCircles
-                      className="size-[50px] border-none bg-transparent"
-                      radius={220}
-                      duration={25}
-                      delay={20}
-                    >
-                      <div className="flex flex-col items-center justify-center">
-                        <div className="p-3 bg-green-500 rounded-full shadow-lg">
-                          <Users className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="text-xs font-bold text-white mt-1 bg-black/50 px-2 rounded">External</span>
-                      </div>
-                    </OrbitingCircles>
-                  </div>
-
-                </div>
-              </div>
-
             </div>
+
+            {/* Right Image Composition — Desktop only */}
+            <div
+              className="hidden lg:flex items-center justify-center lg:flex-1"
+              style={{
+                opacity: 0,
+                animation: "heroFadeUp 1s cubic-bezier(0.4,0,0.2,1) 1.5s forwards",
+              }}
+            >
+              <HeroImage />
+            </div>
+
           </div>
-        </BackgroundGradientAnimation>
+        </div>
       </section>
 
       {/* Fund Flow Section */}
