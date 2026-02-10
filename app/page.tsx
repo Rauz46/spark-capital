@@ -59,11 +59,11 @@ export default function Home() {
         </div>
 
         {/* Layer 10 — Main Content */}
-        <div className="absolute z-[20] inset-0 flex items-center justify-center px-4 md:px-8 text-white pointer-events-auto">
-          <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 h-full"> {/* Reduced gap-8 to gap-4 */}
+        <div className="absolute z-[20] inset-0 flex items-start justify-center px-4 md:px-8 text-white pointer-events-auto pt-32 lg:pt-40">
+          <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 h-auto"> {/* Reduced gap-8 to gap-4 */}
 
             {/* Text Column */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-3xl z-10 lg:flex-1 -mt-12 lg:mt-0"> {/* Added negative top margin to pull up */}
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-3xl z-10 lg:flex-1"> {/* Added negative top margin to pull up */}
 
               {/* Badge — Small caps, no box, fluorescent green */}
               <span
@@ -86,7 +86,7 @@ export default function Home() {
                 }}
               >
                 <span className="block">A New Way to Invest</span>
-                <span className="block font-semibold" style={{ color: "#BAFF00" }}>in New Ventures.</span> {/* Added font-semibold */}
+                <span className="block font-bold" style={{ color: "#BAFF00" }}>in New Ventures.</span> {/* Added font-semibold */}
               </h1>
 
               {/* Subheading — Updated Copy */}
