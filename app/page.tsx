@@ -67,14 +67,13 @@ export default function Home() {
 
               {/* Badge — Small caps, no box, fluorescent green */}
               <span
-                className="mb-4 text-sm md:text-base font-sans font-medium tracking-[0.2em]" // Reduced mb-6 to mb-4
+                className="mb-4 text-sm md:text-base font-sans font-medium tracking-[0.2em]"
                 style={{
                   color: "#BAFF00",
                   fontVariant: "small-caps",
-                  textTransform: "lowercase",
                 }}
               >
-                <span className="uppercase text-lg">ai-first venture studio</span>
+                <span className="text-lg">ai-first venture studio</span>
               </span>
 
               {/* Main Heading — Playfair Display, Thin & Tall (Jasper Style) */}
