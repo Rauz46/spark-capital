@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+import MouseScroll from "@/components/ui/mouse-scroll";
 import { ArrowRight, CheckCircle2, TrendingUp, Users, Rocket } from "lucide-react";
 
 export default function Home() {
