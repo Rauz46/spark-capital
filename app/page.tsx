@@ -71,16 +71,16 @@ export default function Home() {
                 AI-First Venture Studio
               </span>
 
-              {/* Main Heading — Playfair Display, Jasper-style tight spacing */}
+              {/* Main Heading — Playfair Display, Jasper-style tight spacing, exactly 2 lines */}
               <h1
-                className="font-heading font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] leading-[0.95] tracking-[-0.05em]"
+                className="font-heading font-black leading-[0.95] tracking-[-0.05em] whitespace-nowrap"
                 style={{
+                  fontSize: "clamp(2.5rem, 5.5vw, 5.5rem)",
                   textShadow: "0 2px 30px rgba(0,0,0,0.4), 0 0 60px rgba(186,255,0,0.06)",
                 }}
               >
-                A New Way to Invest
-                <br />
-                <span style={{ color: "#BAFF00" }}>in New Ventures.</span>
+                <span className="block">A New Way to Invest</span>
+                <span className="block" style={{ color: "#BAFF00" }}>in New Ventures.</span>
               </h1>
 
               {/* Subheading — Clean Inter, one style */}

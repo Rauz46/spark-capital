@@ -274,6 +274,48 @@
       stroke-dashoffset: 0;
     }
   }
+
+  @keyframes heroImageSpin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes heroImageSpinReverse {
+    from {
+      transform: rotate(360deg);
+    }
+
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes heroParticleOrbit {
+    from {
+      transform: rotate(0deg) translateX(170px);
+    }
+
+    to {
+      transform: rotate(360deg) translateX(170px);
+    }
+  }
+
+  @keyframes badgeFloat {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
 }
 
 :root {

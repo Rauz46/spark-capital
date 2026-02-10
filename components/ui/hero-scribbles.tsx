@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Subtle geometric decorations for the hero banner.
- * Premium, minimal aesthetic — thin lines, dots, and geometric shapes.
+ * Premium geometric scribbles for the hero banner.
+ * VC/startup themed with fluorescent green accents.
  */
 export function HeroScribbles() {
     return (
@@ -10,115 +10,163 @@ export function HeroScribbles() {
             className="absolute inset-0 z-[2] pointer-events-none overflow-hidden"
             aria-hidden="true"
         >
-            {/* ── Corner Brackets ── */}
+            {/* ── Corner Brackets — Green accented ── */}
 
-            {/* Top-Left Corner */}
-            <div className="absolute top-[6%] left-[4%] opacity-[0.12]">
-                <div className="w-16 h-16 md:w-24 md:h-24 border-l border-t border-white/40" />
+            {/* Top-Left */}
+            <div className="absolute top-[5%] left-[3%]">
+                <div className="w-14 h-14 md:w-20 md:h-20 border-l border-t border-[#BAFF00]/20" />
             </div>
 
-            {/* Top-Right Corner */}
-            <div className="absolute top-[6%] right-[4%] opacity-[0.12]">
-                <div className="w-16 h-16 md:w-24 md:h-24 border-r border-t border-white/40" />
+            {/* Top-Right */}
+            <div className="absolute top-[5%] right-[3%]">
+                <div className="w-14 h-14 md:w-20 md:h-20 border-r border-t border-[#BAFF00]/20" />
             </div>
 
-            {/* Bottom-Left Corner */}
-            <div className="absolute bottom-[6%] left-[4%] opacity-[0.12]">
-                <div className="w-16 h-16 md:w-24 md:h-24 border-l border-b border-white/40" />
+            {/* Bottom-Left */}
+            <div className="absolute bottom-[5%] left-[3%]">
+                <div className="w-14 h-14 md:w-20 md:h-20 border-l border-b border-[#BAFF00]/20" />
             </div>
 
-            {/* Bottom-Right Corner */}
-            <div className="absolute bottom-[6%] right-[4%] opacity-[0.12]">
-                <div className="w-16 h-16 md:w-24 md:h-24 border-r border-b border-white/40" />
+            {/* Bottom-Right */}
+            <div className="absolute bottom-[5%] right-[3%]">
+                <div className="w-14 h-14 md:w-20 md:h-20 border-r border-b border-[#BAFF00]/20" />
             </div>
 
-            {/* ── Thin Accent Lines ── */}
+            {/* ── Floating data points — VC metrics ── */}
 
-            {/* Horizontal line - upper left */}
+            {/* Top-left metric */}
             <div
-                className="absolute top-[20%] left-[3%] w-20 md:w-32 h-px bg-gradient-to-r from-white/20 to-transparent"
+                className="absolute top-[12%] left-[6%] opacity-[0.15]"
+                style={{ animation: "scribbleFloat 7s ease-in-out infinite" }}
+            >
+                <div className="flex items-center gap-2">
+                    <div className="w-6 h-px bg-[#BAFF00]/60" />
+                    <span className="text-[9px] font-mono text-[#BAFF00]/60 tracking-wider">$1M ARR</span>
+                </div>
+            </div>
+
+            {/* Right side metric */}
+            <div
+                className="absolute top-[18%] right-[6%] opacity-[0.12]"
+                style={{ animation: "scribbleFloat 8s ease-in-out 2s infinite" }}
+            >
+                <div className="flex items-center gap-2">
+                    <span className="text-[9px] font-mono text-[#BAFF00]/60 tracking-wider">SERIES A</span>
+                    <div className="w-6 h-px bg-[#BAFF00]/60" />
+                </div>
+            </div>
+
+            {/* Bottom-left metric */}
+            <div
+                className="absolute bottom-[18%] left-[5%] opacity-[0.12]"
+                style={{ animation: "scribbleFloat 6s ease-in-out 1s infinite" }}
+            >
+                <div className="flex items-center gap-2">
+                    <div className="w-4 h-px bg-[#BAFF00]/60" />
+                    <span className="text-[9px] font-mono text-[#BAFF00]/60 tracking-wider">BREAKEVEN</span>
+                </div>
+            </div>
+
+            {/* ── Thin accent lines ── */}
+
+            {/* Horizontal line — upper left */}
+            <div
+                className="absolute top-[25%] left-[3%] w-20 md:w-32 h-px bg-gradient-to-r from-[#BAFF00]/15 to-transparent"
                 style={{ animation: "scribbleFloat 8s ease-in-out infinite" }}
             />
 
-            {/* Horizontal line - lower right */}
+            {/* Horizontal line — lower right */}
             <div
-                className="absolute bottom-[25%] right-[3%] w-20 md:w-32 h-px bg-gradient-to-l from-white/20 to-transparent"
+                className="absolute bottom-[28%] right-[3%] w-20 md:w-32 h-px bg-gradient-to-l from-[#BAFF00]/15 to-transparent"
                 style={{ animation: "scribbleFloat 7s ease-in-out 2s infinite" }}
             />
 
-            {/* Vertical line - left */}
+            {/* Vertical line — left */}
             <div
-                className="absolute top-[40%] left-[8%] w-px h-16 md:h-24 bg-gradient-to-b from-white/15 to-transparent"
+                className="absolute top-[40%] left-[8%] w-px h-16 md:h-24 bg-gradient-to-b from-[#BAFF00]/10 to-transparent"
                 style={{ animation: "scribbleFloat 6s ease-in-out 1s infinite" }}
             />
 
-            {/* Vertical line - right */}
+            {/* Vertical line — right */}
             <div
-                className="absolute top-[35%] right-[6%] w-px h-16 md:h-24 bg-gradient-to-b from-transparent via-white/15 to-transparent"
+                className="absolute top-[38%] right-[5%] w-px h-16 md:h-20 bg-gradient-to-b from-transparent via-[#BAFF00]/10 to-transparent"
                 style={{ animation: "scribbleFloat 9s ease-in-out 3s infinite" }}
             />
 
-            {/* ── Small Dots ── */}
+            {/* ── Growth chart sketch — right side ── */}
+            <svg
+                className="absolute top-[70%] right-[6%] w-20 h-12 md:w-28 md:h-16 opacity-[0.12]"
+                style={{ animation: "scribbleFloat 6s ease-in-out 1.5s infinite" }}
+                viewBox="0 0 120 60"
+                fill="none"
+                stroke="#BAFF00"
+                strokeWidth="1"
+                strokeLinecap="round"
+            >
+                <polyline points="5,50 25,42 45,35 65,20 85,12 105,5" strokeDasharray="100" style={{ strokeDashoffset: 0, animation: "drawLine 3s ease forwards" }} />
+                <polyline points="85,12 105,5 105,15" strokeWidth="0.8" />
+            </svg>
+
+            {/* ── Dotted circles — radar pings ── */}
+
+            {/* Ping — top center */}
+            <div
+                className="absolute top-[8%] left-[40%] w-8 h-8 md:w-12 md:h-12 rounded-full border border-dashed border-[#BAFF00]/10"
+                style={{ animation: "viewfinderPulse 4s ease-in-out infinite" }}
+            />
+
+            {/* Ping — bottom right */}
+            <div
+                className="absolute bottom-[12%] right-[25%] w-6 h-6 md:w-10 md:h-10 rounded-full border border-[#BAFF00]/8"
+                style={{ animation: "viewfinderPulse 5s ease-in-out 2s infinite" }}
+            />
+
+            {/* ── Small floating dots ── */}
             {[
-                { top: "12%", left: "15%", delay: "0s" },
-                { top: "18%", right: "25%", delay: "1.5s" },
-                { top: "72%", left: "10%", delay: "2.5s" },
-                { top: "78%", right: "18%", delay: "0.8s" },
-                { top: "45%", left: "6%", delay: "3.5s" },
-                { top: "55%", right: "5%", delay: "2s" },
+                { top: "15%", left: "20%", delay: "0s" },
+                { top: "25%", right: "22%", delay: "1.5s" },
+                { top: "65%", left: "12%", delay: "2.5s" },
+                { top: "72%", right: "15%", delay: "0.8s" },
+                { top: "50%", left: "5%", delay: "3.5s" },
+                { top: "45%", right: "4%", delay: "2s" },
+                { top: "82%", left: "30%", delay: "1s" },
+                { top: "10%", right: "40%", delay: "4s" },
             ].map((dot, i) => (
                 <div
                     key={i}
-                    className="absolute w-1 h-1 rounded-full bg-white/20"
+                    className="absolute w-1 h-1 rounded-full bg-[#BAFF00]/25"
                     style={{
                         top: dot.top,
                         left: (dot as any).left,
                         right: (dot as any).right,
-                        animation: `twinkle 4s ease-in-out ${dot.delay} infinite`,
+                        animation: `twinkle 3s ease-in-out ${dot.delay} infinite`,
                     }}
                 />
             ))}
 
-            {/* ── Subtle Geometric Rings ── */}
-
-            {/* Ring - top right area */}
-            <div
-                className="absolute top-[10%] right-[12%] w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/[0.06]"
-                style={{ animation: "viewfinderPulse 5s ease-in-out infinite" }}
-            />
-
-            {/* Ring - bottom left area */}
-            <div
-                className="absolute bottom-[15%] left-[14%] w-8 h-8 md:w-12 md:h-12 rounded-full border border-white/[0.06]"
-                style={{ animation: "viewfinderPulse 6s ease-in-out 2s infinite" }}
-            />
-
-            {/* ── Small Cross Marks ── */}
-
-            {/* Cross - upper area */}
-            <div className="absolute top-[28%] left-[22%] opacity-[0.08]">
+            {/* ── Cross marks ── */}
+            <div className="absolute top-[30%] left-[18%] opacity-[0.08]">
                 <div className="relative w-3 h-3">
-                    <div className="absolute top-1/2 left-0 w-full h-px bg-white -translate-y-1/2" />
-                    <div className="absolute left-1/2 top-0 h-full w-px bg-white -translate-x-1/2" />
+                    <div className="absolute top-1/2 left-0 w-full h-px bg-[#BAFF00] -translate-y-1/2" />
+                    <div className="absolute left-1/2 top-0 h-full w-px bg-[#BAFF00] -translate-x-1/2" />
                 </div>
             </div>
 
-            {/* Cross - lower area */}
-            <div className="absolute bottom-[30%] right-[20%] opacity-[0.08]">
+            <div className="absolute bottom-[25%] right-[18%] opacity-[0.08]">
                 <div className="relative w-3 h-3">
-                    <div className="absolute top-1/2 left-0 w-full h-px bg-white -translate-y-1/2" />
-                    <div className="absolute left-1/2 top-0 h-full w-px bg-white -translate-x-1/2" />
+                    <div className="absolute top-1/2 left-0 w-full h-px bg-[#BAFF00] -translate-y-1/2" />
+                    <div className="absolute left-1/2 top-0 h-full w-px bg-[#BAFF00] -translate-x-1/2" />
                 </div>
             </div>
 
-            {/* ── Diagonal Accent ── */}
+            {/* ── Diagonal accents ── */}
             <div
-                className="absolute bottom-[12%] left-[30%] w-24 h-px bg-gradient-to-r from-white/10 to-transparent origin-left rotate-[-30deg]"
+                className="absolute bottom-[15%] left-[25%] w-24 h-px bg-gradient-to-r from-[#BAFF00]/10 to-transparent origin-left rotate-[-25deg]"
                 style={{ animation: "scribbleFloat 10s ease-in-out 1s infinite" }}
             />
 
             <div
-                className="absolute top-[15%] right-[30%] w-20 h-px bg-gradient-to-l from-white/10 to-transparent origin-right rotate-[20deg]"
+                className="absolute top-[20%] right-[28%] w-16 h-px bg-gradient-to-l from-[#BAFF00]/10 to-transparent origin-right rotate-[15deg]"
                 style={{ animation: "scribbleFloat 8s ease-in-out 4s infinite" }}
             />
         </div>
