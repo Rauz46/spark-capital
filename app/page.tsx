@@ -12,6 +12,11 @@ export default function Home() {
     <div className="flex flex-col gap-16 md:gap-24 pb-16">
       {/* Hero Section - Redesigned to Match Screenshot */}
       <section className="relative h-screen w-full overflow-hidden bg-primary">
+        {/* Spotlight Effect - Moved outside to ensure visibility */}
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20 z-40"
+          fill="white"
+        />
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full"
           gradientBackgroundStart="rgb(0, 60, 200)" // Bright Royal Blue Base
@@ -28,11 +33,7 @@ export default function Home() {
             style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)`, backgroundSize: '40px 40px' }}>
           </div>
 
-          {/* Spotlight Effect */}
-          <Spotlight
-            className="-top-40 left-0 md:left-60 md:-top-20 z-10"
-            fill="white"
-          />
+
 
           <div className="absolute z-50 inset-0 flex items-center justify-center p-4 md:p-12 text-white pointer-events-none">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center h-full">
