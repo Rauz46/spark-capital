@@ -58,53 +58,53 @@ export default function Home() {
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 h-full">
 
             {/* Center Text Column */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl z-10 lg:flex-1 opacity-100">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-3xl z-10 lg:flex-1">
 
-              {/* Badge */}
+              {/* Badge — Small caps, no box, fluorescent green */}
               <span
-                className="inline-block mb-6 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-xs md:text-sm font-mono tracking-widest text-white/80 uppercase opacity-100"
+                className="mb-5 text-xs md:text-sm font-sans font-medium tracking-[0.25em]"
+                style={{
+                  color: "#BAFF00",
+                  fontVariant: "small-caps",
+                }}
               >
                 AI-First Venture Studio
               </span>
 
-              {/* Main Heading */}
+              {/* Main Heading — Playfair Display, Jasper-style tight spacing */}
               <h1
-                className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[84px] leading-[1.1] tracking-[-0.04em] text-white opacity-100"
+                className="font-heading font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] leading-[0.95] tracking-[-0.05em]"
                 style={{
-                  textShadow: "0 4px 20px rgba(0,0,0,0.3), 0 0 40px rgba(255,255,255,0.08)",
+                  textShadow: "0 2px 30px rgba(0,0,0,0.4), 0 0 60px rgba(186,255,0,0.06)",
                 }}
               >
                 A New Way to Invest
                 <br />
-                <span className="italic font-serif">in New Ventures.</span>
+                <span style={{ color: "#BAFF00" }}>in New Ventures.</span>
               </h1>
 
-              {/* Subheading */}
+              {/* Subheading — Clean Inter, one style */}
               <p
-                className="mt-6 text-lg md:text-xl lg:text-[22px] font-sans font-normal text-white/85 leading-relaxed max-w-[800px] opacity-100"
+                className="mt-7 text-base md:text-lg lg:text-xl font-sans font-light text-white/80 leading-relaxed max-w-[650px]"
               >
                 We invest in Enterprise AI Startups via our Venture Studio, building companies from idea to scale.
               </p>
 
-              {/* Description */}
+              {/* Description — Same font, slightly muted */}
               <p
-                className="mt-5 text-sm md:text-base lg:text-lg font-sans font-normal text-white/70 leading-[1.7] max-w-[700px] opacity-100"
+                className="mt-4 text-sm md:text-base font-sans font-light text-white/55 leading-[1.7] max-w-[600px]"
               >
                 Spark Capital is a Venture Capital firm that invests in post-revenue enterprise AI startups through a unique two-fund model — from idea incubation to multimillion-dollar growth.
               </p>
 
               {/* Mouse Scroll */}
-              <div
-                className="mt-10 opacity-100"
-              >
+              <div className="mt-12">
                 <MouseScroll />
               </div>
             </div>
 
             {/* Right Image Composition — Desktop only */}
-            <div
-              className="hidden lg:flex items-center justify-center lg:flex-1 opacity-100"
-            >
+            <div className="hidden lg:flex items-center justify-center lg:flex-1">
               <HeroImage />
             </div>
 
