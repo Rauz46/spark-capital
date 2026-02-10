@@ -5,7 +5,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import { Spotlight } from "@/components/ui/spotlight";
 import MouseScroll from "@/components/ui/mouse-scroll";
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Rocket } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, Users, Rocket, Lightbulb, Globe } from "lucide-react";
 
 export default function Home() {
   return (
@@ -67,34 +67,63 @@ export default function Home() {
               <div className="relative w-full h-full min-h-[400px] flex items-center justify-center pointer-events-auto">
                 <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px]">
 
-                  {/* Outer Dashed Ring */}
-                  {/* Removed Green Border */}
-                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/30 animate-[spin_60s_linear_infinite]"></div>
+                  <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent">
 
-                  {/* Fund Segments Container - SVG for precise arcs */}
-                  <svg viewBox="0 0 100 100" className="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] drop-shadow-2xl">
+                    {/* Central Image */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl z-20 bg-blue-900">
+                      <Image
+                        src="/images/business-meeting-contact.webp"
+                        alt="Startups"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
 
-                    {/* Fund 1 Arc (Teal/Cyan) - Top Left to Right */}
-                    <path d="M 50 10 A 40 40 0 0 1 90 50 L 75 50 A 25 25 0 0 0 50 25 Z" fill="#06b6d4" className="hover:scale-105 transition-all origin-center cursor-pointer opacity-90 hover:opacity-100" />
-                    <text x="55" y="22" className="text-[4px] font-bold fill-white -rotate-15" textAnchor="middle">Fund 1</text>
+                    {/* Fund 1 - Inner Circle */}
+                    <OrbitingCircles
+                      className="size-[50px] border-none bg-transparent"
+                      duration={20}
+                      delay={20}
+                      radius={100}
+                    >
+                      <div className="flex flex-col items-center justify-center">
+                        <div className="p-3 bg-cyan-500 rounded-full shadow-lg">
+                          <Lightbulb className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-xs font-bold text-white mt-1 bg-black/50 px-2 rounded">Fund 1</span>
+                      </div>
+                    </OrbitingCircles>
 
-                    {/* Fund 2 Arc (Blue) - Right Bottom */}
-                    <path d="M 90 50 A 40 40 0 0 1 50 90 L 50 75 A 25 25 0 0 0 75 50 Z" fill="#3b82f6" className="hover:scale-105 transition-all origin-center cursor-pointer opacity-90 hover:opacity-100" />
-                    <text x="82" y="65" className="text-[4px] font-bold fill-white rotate-45" textAnchor="middle">Fund 2</text>
+                    {/* Fund 2 - Middle Circle */}
+                    <OrbitingCircles
+                      className="size-[50px] border-none bg-transparent"
+                      duration={20}
+                      delay={10}
+                      radius={160}
+                      reverse
+                    >
+                      <div className="flex flex-col items-center justify-center">
+                        <div className="p-3 bg-purple-500 rounded-full shadow-lg">
+                          <TrendingUp className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-xs font-bold text-white mt-1 bg-black/50 px-2 rounded">Fund 2</span>
+                      </div>
+                    </OrbitingCircles>
 
-                    {/* Fund 3 Arc (Purple) - Left Bottom */}
-                    <path d="M 50 90 A 40 40 0 1 1 50 10 L 50 25 A 25 25 0 1 0 50 75 Z" fill="#a855f7" className="hover:scale-105 transition-all origin-center cursor-pointer opacity-90 hover:opacity-100" />
-                    <text x="25" y="65" className="text-[4px] font-bold fill-white -rotate-45" textAnchor="middle">Fund 3</text>
-                  </svg>
-
-                  {/* Central Image */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl z-20 bg-blue-900">
-                    <Image
-                      src="/images/business-meeting-contact.webp"
-                      alt="Startups"
-                      fill
-                      className="object-cover"
-                    />
+                    {/* External - Outer Circle */}
+                    <OrbitingCircles
+                      className="size-[50px] border-none bg-transparent"
+                      radius={220}
+                      duration={25}
+                      delay={20}
+                    >
+                      <div className="flex flex-col items-center justify-center">
+                        <div className="p-3 bg-green-500 rounded-full shadow-lg">
+                          <Users className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-xs font-bold text-white mt-1 bg-black/50 px-2 rounded">External</span>
+                      </div>
+                    </OrbitingCircles>
                   </div>
 
                 </div>
