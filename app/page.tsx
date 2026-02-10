@@ -12,17 +12,17 @@ export default function Home() {
       {/* ══════════════ HERO SECTION — Cinematic Redesign ══════════════ */}
       <section className="relative h-screen w-full overflow-hidden bg-primary">
 
-        {/* Layer 0 — Gradient Animation Background — Lighter Blue-Purple Mix */}
+        {/* Layer 0 — Gradient Animation Background — Brighter Blue-Purple Mix */}
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full z-[1]"
-          gradientBackgroundStart="rgb(30, 20, 60)"
-          gradientBackgroundEnd="rgb(10, 20, 80)"
-          firstColor="100, 50, 220"   // Lighter Purple
-          secondColor="50, 100, 240"  // Lighter Royal Blue
-          thirdColor="120, 80, 200"   // Lavender
-          fourthColor="60, 140, 250"  // Sky Blue
-          fifthColor="160, 100, 200"  // Pinkish Purple
-          pointerColor="140, 100, 255"
+          gradientBackgroundStart="rgb(90, 60, 160)"
+          gradientBackgroundEnd="rgb(60, 90, 180)"
+          firstColor="160, 100, 255"  // Bright Purple
+          secondColor="100, 160, 255" // Bright Blue
+          thirdColor="200, 140, 255"  // Light Lavender
+          fourthColor="100, 200, 255" // Sky Blue
+          fifthColor="240, 160, 220"  // Pinkish Glow
+          pointerColor="180, 180, 255"
           size="90%"
           blendingValue="hard-light"
           interactive={true}
