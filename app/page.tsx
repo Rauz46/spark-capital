@@ -59,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Layer 10 — Main Content */}
-        <div className="absolute z-[20] inset-0 flex items-start justify-center px-4 md:px-8 text-white pointer-events-auto pt-32 lg:pt-40">
+        <div className="absolute z-[20] inset-0 flex items-start justify-center px-4 md:px-8 text-white pointer-events-auto pt-12 lg:pt-16">
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 h-auto"> {/* Reduced gap-8 to gap-4 */}
 
             {/* Text Column */}
