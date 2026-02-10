@@ -57,7 +57,7 @@ export default function Home() {
         <div className="absolute z-[20] inset-0 flex items-center justify-center px-4 md:px-8 text-white pointer-events-auto">
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 h-full">
 
-            {/* Center Text Column */}
+            {/* Text Column */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-3xl z-10 lg:flex-1">
 
               {/* Badge — Small caps, no box, fluorescent green */}
@@ -83,24 +83,10 @@ export default function Home() {
                 <span className="block" style={{ color: "#BAFF00" }}>in New Ventures.</span>
               </h1>
 
-              {/* Subheading — Clean Inter, one style */}
-              <p
-                className="mt-7 text-base md:text-lg lg:text-xl font-sans font-light text-white/80 leading-relaxed max-w-[650px]"
-              >
-                We invest in Enterprise AI Startups via our Venture Studio, building companies from idea to scale.
+              {/* Subheading — Single consistent style */}
+              <p className="mt-7 text-sm md:text-base lg:text-lg font-sans font-normal text-white/70 leading-[1.8] max-w-[620px]">
+                We invest in Enterprise AI Startups via our Venture Studio, building companies from idea to scale. Spark Capital invests in post-revenue enterprise AI startups through a unique two-fund model — from idea incubation to multimillion-dollar growth.
               </p>
-
-              {/* Description — Same font, slightly muted */}
-              <p
-                className="mt-4 text-sm md:text-base font-sans font-light text-white/55 leading-[1.7] max-w-[600px]"
-              >
-                Spark Capital is a Venture Capital firm that invests in post-revenue enterprise AI startups through a unique two-fund model — from idea incubation to multimillion-dollar growth.
-              </p>
-
-              {/* Mouse Scroll */}
-              <div className="mt-12">
-                <MouseScroll />
-              </div>
             </div>
 
             {/* Right Image Composition — Desktop only */}
@@ -109,6 +95,11 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+
+        {/* Mouse Scroll — Center Bottom */}
+        <div className="absolute z-[21] bottom-8 left-1/2 -translate-x-1/2">
+          <MouseScroll />
         </div>
       </section>
 
