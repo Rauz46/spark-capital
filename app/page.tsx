@@ -17,13 +17,18 @@ export default function Home() {
           firstColor="0, 120, 255" // Vivid Azure
           secondColor="120, 50, 255" // Vivid Purple
           thirdColor="0, 180, 255" // Bright Cyan/Blue
-          fourthColor="50, 255, 50" // Electric Green (Small accent)
-          fifthColor="100, 50, 255" // Deep Purple
+          fourthColor="100, 50, 255" // Deep Purple (Replaced Green)
+          fifthColor="80, 0, 200" // Indigo
           blendingValue="overlay" // Stronger contrast/pop
         >
           {/* Subtle Grid Overlay */}
           <div className="absolute inset-0 z-[5] opacity-20 pointer-events-none"
             style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)`, backgroundSize: '40px 40px' }}>
+          </div>
+
+          {/* Background Beams Effect */}
+          <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+            <BackgroundBeams />
           </div>
 
           <div className="absolute z-50 inset-0 flex items-center justify-center p-4 md:p-12 text-white pointer-events-none">
@@ -34,7 +39,7 @@ export default function Home() {
                 <div className="relative">
                   <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight drop-shadow-lg">
                     A New Way to Invest <br />
-                    in <span className="font-serif italic text-[#39FF14] drop-shadow-md">New Ventures</span>
+                    in <span className="font-serif italic text-white drop-shadow-md">New Ventures</span>
                   </h1>
                 </div>
 
@@ -48,11 +53,9 @@ export default function Home() {
                   multimillion revenue and readies it for external investors.
                 </p>
 
-                <div className="flex flex-wrap gap-4 pt-2">
-                  {/* Kept buttons for functionality, though not explicitly in screenshot text, usually needed for UX */}
-                  <Button asChild size="lg" className="bg-[#39FF14] text-blue-900 hover:bg-[#32e010] font-bold text-lg px-8 h-12 rounded-md shadow-lg transition-transform hover:scale-105">
-                    <Link href="/contact">Get in Touch</Link>
-                  </Button>
+                {/* Mouse Scroll Animation - Replaces CTA */}
+                <div className="pt-8 flex justify-start">
+                  <MouseScroll />
                 </div>
               </div>
 
@@ -61,7 +64,8 @@ export default function Home() {
                 <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px]">
 
                   {/* Outer Dashed Ring */}
-                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#39FF14]/50 animate-[spin_60s_linear_infinite]"></div>
+                  {/* Removed Green Border */}
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/30 animate-[spin_60s_linear_infinite]"></div>
 
                   {/* Fund Segments Container - SVG for precise arcs */}
                   <svg viewBox="0 0 100 100" className="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] drop-shadow-2xl">
