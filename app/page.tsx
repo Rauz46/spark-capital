@@ -14,7 +14,7 @@ export default function Home() {
 
         {/* Layer 0 — Gradient Animation Background */}
         <BackgroundGradientAnimation
-          containerClassName="absolute inset-0 h-full w-full"
+          containerClassName="absolute inset-0 h-full w-full z-[1]"
           gradientBackgroundStart="rgb(0, 60, 200)"
           gradientBackgroundEnd="rgb(0, 40, 160)"
           firstColor="0, 120, 255"
