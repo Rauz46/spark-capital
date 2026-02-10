@@ -12,17 +12,20 @@ export default function Home() {
       {/* ══════════════ HERO SECTION — Cinematic Redesign ══════════════ */}
       <section className="relative h-screen w-full overflow-hidden bg-primary">
 
-        {/* Layer 0 — Gradient Animation Background */}
+        {/* Layer 0 — Gradient Animation Background — Blue-Purple Mix */}
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full z-[1]"
-          gradientBackgroundStart="rgb(0, 60, 200)"
-          gradientBackgroundEnd="rgb(0, 40, 160)"
-          firstColor="0, 120, 255"
-          secondColor="120, 50, 255"
-          thirdColor="0, 180, 255"
-          fourthColor="100, 50, 255"
-          fifthColor="80, 0, 200"
-          blendingValue="overlay"
+          gradientBackgroundStart="rgb(8, 10, 30)"
+          gradientBackgroundEnd="rgb(20, 0, 40)"
+          firstColor="60, 20, 180"   // Deep Purple
+          secondColor="10, 40, 160"  // Royal Blue
+          thirdColor="80, 0, 120"    // Violet
+          fourthColor="20, 80, 200"  // Blue
+          fifthColor="120, 20, 100"  // Pink-Purple
+          pointerColor="140, 100, 255"
+          size="90%"
+          blendingValue="hard-light"
+          interactive={true}
         />
 
         {/* Layer 1 — Cinematic Grid + Vignette */}
@@ -50,8 +53,10 @@ export default function Home() {
           }}
         />
 
-        {/* Layer 2 — Scribbles */}
-        <HeroScribbles />
+        {/* Layer 2 — Scribbles — Increased Visibility */}
+        <div className="z-[5] opacity-100">
+          <HeroScribbles />
+        </div>
 
         {/* Layer 10 — Main Content */}
         <div className="absolute z-[20] inset-0 flex items-center justify-center px-4 md:px-8 text-white pointer-events-auto">
@@ -62,20 +67,21 @@ export default function Home() {
 
               {/* Badge — Small caps, no box, fluorescent green */}
               <span
-                className="mb-5 text-xs md:text-sm font-sans font-medium tracking-[0.25em]"
+                className="mb-6 text-sm md:text-base font-sans font-medium tracking-[0.2em]"
                 style={{
                   color: "#BAFF00",
                   fontVariant: "small-caps",
+                  textTransform: "lowercase",
                 }}
               >
-                AI-First Venture Studio
+                <span className="uppercase text-lg">ai-first venture studio</span>
               </span>
 
-              {/* Main Heading — Playfair Display, Jasper-style tight spacing, exactly 2 lines */}
+              {/* Main Heading — Playfair Display, Thin & Tall (Jasper Style) */}
               <h1
-                className="font-heading font-black leading-[0.95] tracking-[-0.05em] whitespace-nowrap"
+                className="font-heading font-normal leading-[0.95] tracking-[-0.03em] whitespace-nowrap"
                 style={{
-                  fontSize: "clamp(2.5rem, 5.5vw, 5.5rem)",
+                  fontSize: "clamp(2.5rem, 5.5vw, 6rem)",
                   textShadow: "0 2px 30px rgba(0,0,0,0.4), 0 0 60px rgba(186,255,0,0.06)",
                 }}
               >
@@ -83,9 +89,9 @@ export default function Home() {
                 <span className="block" style={{ color: "#BAFF00" }}>in New Ventures.</span>
               </h1>
 
-              {/* Subheading — Single consistent style */}
-              <p className="mt-7 text-sm md:text-base lg:text-lg font-sans font-normal text-white/70 leading-[1.8] max-w-[620px]">
-                We invest in Enterprise AI Startups via our Venture Studio, building companies from idea to scale. Spark Capital invests in post-revenue enterprise AI startups through a unique two-fund model — from idea incubation to multimillion-dollar growth.
+              {/* Subheading — Updated Copy */}
+              <p className="mt-8 text-sm md:text-base lg:text-lg font-sans font-light text-white/80 leading-[1.8] max-w-[700px]">
+                We are a Venture Capital firm that invests in Enterprise AI Startups via our Venture Studio. We do this via a unique two fund model. Fund 1 invests and initially owns 100% of new startups that are incubated from ideas generated internally via our Venture Studio. While Fund 2 invests only after a startup gets to breakeven and is on track to $1million in ARR. Fund 2&apos;s growth capital accelerates the startups to multimillion revenue and readies it for external investors.
               </p>
             </div>
 
