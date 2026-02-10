@@ -12,11 +12,11 @@ export default function Home() {
       {/* ══════════════ HERO SECTION — Cinematic Redesign ══════════════ */}
       <section className="relative h-screen w-full overflow-hidden bg-primary">
 
-        {/* Layer 0 — Gradient Animation Background — Cool Blue & Electric Purple */}
+        {/* Layer 0 — Gradient Animation Background — Cool Blue & Electric Purple (Bright Base) */}
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0 h-full w-full z-[1]"
-          gradientBackgroundStart="rgb(10, 20, 50)"
-          gradientBackgroundEnd="rgb(20, 10, 60)"
+          gradientBackgroundStart="rgb(50, 40, 160)"
+          gradientBackgroundEnd="rgb(40, 70, 180)"
           firstColor="18, 113, 255"   // Electric Blue
           secondColor="100, 50, 255"  // Electric Purple
           thirdColor="50, 160, 255"   // Bright Cyan/Blue
