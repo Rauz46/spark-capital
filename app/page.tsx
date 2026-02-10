@@ -9,7 +9,7 @@ import MouseScroll from "@/components/ui/mouse-scroll";
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-24 pb-16">
-      {/* ══════════════ HERO SECTION — Cinematic Redesign ══════════════ */}
+      {/* ══════════════ HERO SECTION — Cinematic Redesign | Trigger Rebuild 1 ══════════════ */}
       <section className="relative h-screen w-full overflow-hidden bg-primary">
 
         {/* Layer 0 — Gradient Animation Background — More Purple on Right */}
