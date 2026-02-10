@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Spotlight } from "@/components/ui/spotlight";
 import MouseScroll from "@/components/ui/mouse-scroll";
 import { ArrowRight, CheckCircle2, TrendingUp, Users, Rocket } from "lucide-react";
 
@@ -28,10 +28,11 @@ export default function Home() {
             style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)`, backgroundSize: '40px 40px' }}>
           </div>
 
-          {/* Background Beams Effect */}
-          <div className="absolute inset-0 z-10 pointer-events-none">
-            <BackgroundBeams />
-          </div>
+          {/* Spotlight Effect */}
+          <Spotlight
+            className="-top-40 left-0 md:left-60 md:-top-20 z-10"
+            fill="white"
+          />
 
           <div className="absolute z-50 inset-0 flex items-center justify-center p-4 md:p-12 text-white pointer-events-none">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center h-full">
