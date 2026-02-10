@@ -29,7 +29,7 @@ export default function Home() {
           </div>
 
           {/* Background Beams Effect */}
-          <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+          <div className="absolute inset-0 z-10 pointer-events-none">
             <BackgroundBeams />
           </div>
 
